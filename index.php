@@ -2,9 +2,10 @@
 Visualizzare a schermo il paragrafo con la relative lunghezza e sostituire la badword passata in GET con tre *. -->
 <?php
 //testo paragrafo
+
 $testo = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit atque hic eum placeat corporis nesciunt.';
-$_GET["badword"];
-$parolaCensurata = str_replace($_GET, "***", $testo);
+$censura = $_GET["badword"];
+$parolaCensurata = str_replace($censura, "***", $testo);
 
 ?>
 
@@ -16,6 +17,9 @@ $parolaCensurata = str_replace($_GET, "***", $testo);
     <title>Bad Words</title>
 </head>
 <body>
-    <p>Questo è il paragrafo: <?php echo $_GET["badword"] . '' . $testo ?></p>
+    <p><?php echo $testo ?></p>
+    <p><?php echo strlen($testo) ?></p>
+    <p><?php echo $parolaCensurata ?></p>
+
 </body>
 </html>
