@@ -4,7 +4,7 @@ Visualizzare a schermo il paragrafo con la relative lunghezza e sostituire la ba
 //testo paragrafo
 $testo = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit atque hic eum placeat corporis nesciunt.';
 $_GET["badword"];
-$onlyconsonants = str_replace($_GET, "", "***");
+$parolaCensurata = str_replace($_GET, "***", $testo);
 
 ?>
 
